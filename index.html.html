@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatClaw Nails | Sabrina Cortez</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #0a0a0a;
+            --text-gray: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body { background-color: var(--dark-bg); color: white; overflow-x: hidden; }
+
+        .video-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; overflow: hidden;
+        }
+
+        .video-container video {
+            min-width: 100%; min-height: 100%; width: auto; height: auto;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            object-fit: cover; filter: brightness(0.4);
+        }
+
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: radial-gradient(circle, transparent 20%, var(--dark-bg) 150%);
+            z-index: 0;
+        }
+
+        .content {
+            position: relative; z-index: 1; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; min-height: 100vh; padding: 20px; text-align: center;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.2); padding: 40px; border-radius: 30px;
+            max-width: 400px; width: 100%;
+        }
+
+        .profile-img {
+            width: 150px; height: 150px; border-radius: 50%; border: 2px solid var(--gold);
+            margin-bottom: 20px; object-fit: cover; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        h1 { font-size: 2rem; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
+        .subtitle { color: var(--gold); font-weight: 300; margin-bottom: 30px; font-size: 0.9rem; letter-spacing: 4px; }
+
+        .cta-button {
+            display: flex; align-items: center; justify-content: center;
+            background: var(--gold); color: black; text-decoration: none;
+            padding: 18px; border-radius: 12px; font-weight: 700; width: 100%;
+            margin-bottom: 15px; transition: 0.3s; text-transform: uppercase; font-size: 0.85rem;
+        }
+
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4); }
+        .cta-button i { margin-right: 10px; font-size: 1.2rem; }
+
+        .secondary-links { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; }
+        .sec-link {
+            border: 1px solid rgba(255, 255, 255, 0.1); padding: 12px; border-radius: 10px;
+            color: white; text-decoration: none; font-size: 0.8rem; transition: 0.3s;
+        }
+
+        footer { margin-top: 40px; font-size: 0.7rem; color: var(--text-gray); letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="https://res.cloudinary.com/dusdxwour/video/upload/v1778763177/V001_j1xyfb.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="content">
+        <div class="profile-card">
+            <img src="https://res.cloudinary.com/dusdxwour/image/upload/v1778763179/S001_on3g1k.jpg" alt="Sabrina Cortez" class="profile-img">
+            
+            <h1>Sabrina Cortez</h1>
+            <p class="subtitle">CATCLAW NAILS VIP</p>
+
+            <a href="https://wa.me/393273397334" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Agendar em Milão
+            </a>
+
+            <div class="secondary-links">
+                <a href="https://www.instagram.com/catclawnail" class="sec-link">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="#" class="sec-link">
+                    <i class="fas fa-images"></i> Portfólio
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 DOM INVESTITORE | DESIGN DE LUXO
+        </footer>
+    </div>
+
+</body>
+</html>
